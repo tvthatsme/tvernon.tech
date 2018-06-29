@@ -1,5 +1,14 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { injectGlobal } from 'emotion'
+
+injectGlobal`
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+`
 
 const IndexPage = () => (
   <div>

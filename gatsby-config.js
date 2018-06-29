@@ -11,6 +11,10 @@ module.exports = {
         name: 'posts',
       },
     },
+    {
+      resolve: 'gatsby-plugin-emotion',
+      options: {},
+    },
     'gatsby-transformer-remark',
   ],
 }

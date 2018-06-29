@@ -1,8 +1,13 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { css } from 'emotion'
+
+const headerClass = css`
+  font-size: 20px;
+`
 
 const Header = ({ siteTitle }) => (
-  <div>
+  <div className={headerClass}>
     <div>
       <h1>
         <Link to="/">{siteTitle}</Link>
