@@ -1,8 +1,9 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "tvernon.tech",
+  "description": "Personal Site for Timothy Vernon",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Timothy Vernon <timothy.n.vernon@gmail.com>",
+  "private": true,
   "dependencies": {
     "emotion": "^9.2.4",
     "emotion-server": "^9.2.4",
@@ -16,7 +17,10 @@
     "react-helmet": "^5.2.0"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "react",
+    "emotion",
+    "blog"
   ],
   "license": "MIT",
   "scripts": {
@@ -30,6 +34,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/tvthatsme/tvernon.tech"
   }
 }
