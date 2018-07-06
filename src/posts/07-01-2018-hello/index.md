@@ -10,7 +10,7 @@ I'm starting a blog today. It probably won't be much or that great but I want to
 
 We all learn something new everyday. At least we should. As a web developer in a constantly changing field, learning is akin to keeping a job. So because every good developer is seeking to keep up or gain a better understanding of their industry, there is ample room for many developers writing many articles explaining many different things. Everyone learns in a different style.
 
-Part of this idea has come from Kent C. Dodds and <a href="https://twitter.com/swyx/status/1009174159690264579">this tweet</a> I saw he replied to. I think there is a lot of value in this idea. Too many developers are afraid to share what they are learning for fear of being wrong or fear of being late to the game. Instead of learning in secret, why not share lots of little things, like tips or tricks, that might be helpful to someone. I don't plan on writing a new framework or the next hot library but I will share the little things that I am learning and the tips/tricks/hacks that I discover.
+Part of this idea has come from Kent C. Dodds and [this tweet](https://twitter.com/swyx/status/1009174159690264579) I saw he replied to. I think there is a lot of value in this idea. Too many developers are afraid to share what they are learning for fear of being wrong or fear of being late to the game. Instead of learning in secret, why not share lots of little things, like tips or tricks, that might be helpful to someone. I don't plan on writing a new framework or the next hot library but I will share the little things that I am learning and the tips/tricks/hacks that I discover.
 
 ## Constantly improve my writing
 

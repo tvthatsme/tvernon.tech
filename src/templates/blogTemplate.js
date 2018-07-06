@@ -1,4 +1,5 @@
 import React from 'react'
+import Markdown from 'markdown-to-jsx'
 
 export default function Template({ data }) {
   const { markdownRemark } = data
@@ -8,7 +9,7 @@ export default function Template({ data }) {
       <div>
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.date}</h2>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <Markdown>{html}</Markdown>
       </div>
     </div>
   )
