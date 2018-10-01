@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: 'Timothy Vernon - Tech',
+    siteUrl: 'https://tvernon.tech',
   },
   plugins: [
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
