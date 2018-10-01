@@ -78,6 +78,7 @@ const Sidebar = props => {
           style={LogoStyle}
           target="_blank"
           href="https://github.com/tvthatsme"
+          rel="noopener"
         >
           <LogoImg src={githubLogo} alt="My Github Profile" />
         </a>
@@ -85,6 +86,7 @@ const Sidebar = props => {
           style={LinkedIn}
           target="_blank"
           href="https://linkedin.com/in/tnvernon"
+          rel="noopener"
         >
           <LogoImg
             src={linkedInLogo}
@@ -96,6 +98,7 @@ const Sidebar = props => {
           style={Twitter}
           target="_blank"
           href="https://twitter.com/tvernon_tech"
+          rel="noopener"
         >
           <LogoImg
             src={twitterLogo}

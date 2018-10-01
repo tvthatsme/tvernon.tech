@@ -12,6 +12,7 @@ export default function Index({ data }) {
   return (
     <Page>
       <Helmet>
+        <html lang="en" />
         <meta
           name="description"
           content="Timothy Vernon Tech Blog and Website"
