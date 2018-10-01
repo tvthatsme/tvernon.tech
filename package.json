@@ -7,8 +7,8 @@
   "dependencies": {
     "emotion": "9.2.12",
     "emotion-server": "9.2.12",
-    "gatsby": "1.9.273",
-    "gatsby-link": "1.6.45",
+    "gatsby": "1.9.278",
+    "gatsby-link": "1.6.46",
     "gatsby-plugin-emotion": "1.1.17",
     "gatsby-plugin-react-helmet": "2.0.11",
     "gatsby-remark-prismjs": "2.0.5",
