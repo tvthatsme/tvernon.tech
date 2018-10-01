@@ -5,26 +5,20 @@
   "author": "Timothy Vernon <timothy.n.vernon@gmail.com>",
   "private": true,
   "dependencies": {
-    "emotion": "^9.2.4",
-    "emotion-server": "^9.2.4",
-    "gatsby": "^1.9.247",
-    "gatsby-link": "^1.6.40",
-    "gatsby-plugin-emotion": "^1.1.17",
-    "gatsby-plugin-react-helmet": "^2.0.10",
-    "gatsby-plugin-sitemap": "^2.0.1",
-    "gatsby-remark-prismjs": "^2.0.5",
-    "gatsby-source-filesystem": "^1.5.39",
-    "gatsby-transformer-remark": "^1.7.44",
-    "prismjs": "^1.15.0",
-    "react-emotion": "^9.2.4",
-    "react-helmet": "^5.2.0"
+    "emotion": "9.2.12",
+    "emotion-server": "9.2.12",
+    "gatsby": "1.9.273",
+    "gatsby-link": "1.6.45",
+    "gatsby-plugin-emotion": "1.1.17",
+    "gatsby-plugin-react-helmet": "2.0.11",
+    "gatsby-remark-prismjs": "2.0.5",
+    "gatsby-source-filesystem": "1.5.39",
+    "gatsby-transformer-remark": "1.7.44",
+    "prismjs": "1.15.0",
+    "react-emotion": "9.2.12",
+    "react-helmet": "5.2.0"
   },
-  "keywords": [
-    "gatsby",
-    "react",
-    "emotion",
-    "blog"
-  ],
+  "keywords": ["gatsby", "react", "emotion", "blog"],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -33,7 +27,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.12.0"
+    "prettier": "1.13.6"
   },
   "repository": {
     "type": "git",
