@@ -4,12 +4,6 @@ date: "2018-07-20"
 title: "Tech Conferences Aren’t Worth Your Time"
 ---
 
-...
-
-This post is a copy of an article that I originally [posted on LinkedIn](https://www.linkedin.com/pulse/tech-conferences-arent-worth-your-time-timothy-vernon/). I'd like to include it on my personal blog for indexablity and so I can find it easier. Hopefully this is helpful for you as well!
-
-...
-
 Yes, thats right: the web industry's event of choice might not be as beneficial as you or your employer think it is.
 
 To be fair, I’ve been attending tech conferences at least once a year since 2013 and have been massively helped each time. There are just some things you can’t get from Twitter, YouTube, newsletters, Hacker News, etc. but can get from a conference focusing on your particular language or framework. Being at an event with hundreds of people who have the same interests and similar experiences is invaluable for both learning and networking. For many of us, attending a conference also means the chance to travel and see a new city. These are all great things! But I want to propose that as software developers we can be wiser in how we spend our time and resources.
