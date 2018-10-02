@@ -2,6 +2,7 @@
 path: "/blog/conditionally-add-to-object-in-javascript"
 date: "2018-08-26"
 title: "Conditionally Add to Object in Javascript"
+description: ""
 ---
 
 I have recently been using a certain Javascript pattern to conditionally add to an object based on whether some conditions are true or not. Here’s what it looks like:
