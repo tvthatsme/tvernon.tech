@@ -2,7 +2,7 @@
 path: "/blog/tech-conferences-arent-worth-your-time"
 date: "2018-07-20"
 title: "Tech Conferences Aren’t Worth Your Time"
-description: ""
+description: "There are so many tech conferences in the web development industry. But are they really worth the investment? Read why workshops might be a smarter choice."
 ---
 
 Yes, thats right: the web industry's event of choice might not be as beneficial as you or your employer think it is.

@@ -40,13 +40,11 @@ export default function Template({ data }) {
   }`.replace(/(^\w+:|^)\/\//, '')
   return (
     <div>
-      <Helmet
-        title={frontmatter.title}
-        meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
-        ]}
-      />
+      <Helmet>
+        <html lang="en" />
+        <title>{`${frontmatter.title} | TVernon Tech`}</title>
+        <meta name="description" content={frontmatter.description} />
+      </Helmet>
       <Page>
         {/* Content goes first for seo */}
         <ContentArea>
@@ -130,6 +128,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        description
       }
     }
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
