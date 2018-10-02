@@ -2,7 +2,7 @@
 path: "/blog/4-web-development-podcasts"
 date: "2018-07-09"
 title: "4 Web Development Podcasts You Should Be Listening To"
-description: ""
+description: "Podcasts are a great way to further yourself as a frontend developer. Here are 4 web development podcasts (plus a few more) that are worth the listen."
 ---
 
 Podcasts have become an integral part of my weekly routine in keeping up with what is happening in the world of web development. As a web developer, it is easy to become overwhelmed at the pace at our industry changes! There are only so many hours in a day and we all have many responsibilities outside of work. Things are changing constantly though, even to the point of “Javascript Fatigue” phrase becoming a term. Part of my answer in how to keep up and continue learning has become podcasts.
