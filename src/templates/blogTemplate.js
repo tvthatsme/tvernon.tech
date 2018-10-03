@@ -10,6 +10,7 @@ import FacebookLogo from '../assets/Facebook.svg'
 import LinkedInLogo from '../assets/LinkedIn.svg'
 import TwitterLogo from '../assets/Twitter.svg'
 import styled from 'react-emotion'
+import Social from '../components/Social'
 
 const ShareSection = styled('div')`
   display: flex;
@@ -108,7 +109,8 @@ export default function Template({ data }) {
         {/* Navigation and other links go second */}
         <SidebarArea>
           <Sidebar isPrimary={false} />
-          {/* <RecentPosts posts={allMarkdownRemark} /> */}
+          <RecentPosts posts={allMarkdownRemark} />
+          <Social />
         </SidebarArea>
       </Page>
     </div>
@@ -131,14 +133,19 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { path: { ne: $path } } }
+      limit: 3
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           id
           frontmatter {
-            title
             date(formatString: "MMMM DD, YYYY")
             path
+            title
+            description
           }
         }
       }

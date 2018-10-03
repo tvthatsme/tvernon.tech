@@ -4,6 +4,7 @@ import PostPreview from '../components/PostPreview'
 import Sidebar from '../components/Sidebar'
 import { Page, SidebarArea, ContentArea } from '../styles/layout'
 import injectGlobalStyles from '../styles/global'
+import Social from '../components/Social'
 
 injectGlobalStyles()
 
@@ -20,6 +21,7 @@ export default function Index({ data }) {
       </Helmet>
       <SidebarArea>
         <Sidebar />
+        <Social />
       </SidebarArea>
       <ContentArea>
         {posts
