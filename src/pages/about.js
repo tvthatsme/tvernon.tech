@@ -7,6 +7,7 @@ export default function About() {
   return (
     <Page>
       <Helmet>
+        <html lang="en" />
         <meta name="description" content="Timothy Vernon About" />
       </Helmet>
       <SidebarArea>

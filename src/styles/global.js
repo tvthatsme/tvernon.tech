@@ -45,10 +45,14 @@ const injectGlobalStyles = () => {
     }
   }
 
+  li,
   p {
     font-size: 14pt;
     font-weight: 300;
     line-height: 1.6;
+  }
+
+  p {
     margin: 12pt 0;
   }
 
