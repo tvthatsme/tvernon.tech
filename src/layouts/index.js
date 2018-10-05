@@ -7,13 +7,14 @@ require('prismjs/themes/prism-okaidia.css')
 
 const Layout = ({ children, data }) => (
   <div>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
+    <Helmet>
+      <html lang="en" />
+      <title>Timothy Vernon | Frontend Developer</title>
+      <meta
+        name="description"
+        content={data.site.siteMetadata.quickDescription}
+      />
+    </Helmet>
     <div>{children()}</div>
   </div>
 )
@@ -29,6 +30,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        quickDescription
       }
     }
   }
