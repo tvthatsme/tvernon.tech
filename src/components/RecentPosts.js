@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import { css } from 'emotion'
 import styled from 'react-emotion'
 import { grey, orange } from '../styles/colors'
+import { linkWithNoStyles } from '../styles/elements'
 
 const Aside = styled('aside')`
   padding: 20px 40px;
@@ -15,7 +16,7 @@ const Heading = styled('h2')`
   border-bottom: 1px solid ${grey};
 `
 
-const test = css`
+const link = css`
   display: block;
   padding-bottom: 10px;
   text-decoration: none;
@@ -24,6 +25,10 @@ const test = css`
   padding: 20px;
   margin-bottom: 40px;
   border-bottom: 5px solid ${orange};
+
+  &:hover {
+    background: white;
+  }
 `
 
 const titleText = css`
@@ -49,7 +54,7 @@ const RecentPosts = props => {
         return (
           <Link
             className={css`
-              ${test};
+              ${linkWithNoStyles} ${link};
             `}
             to={path}
             key={id}
@@ -81,7 +86,7 @@ const RecentPosts = props => {
       <Link
         to="/"
         className={css`
-          ${test};
+          ${linkWithNoStyles} ${link};
         `}
       >
         <p
