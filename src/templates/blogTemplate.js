@@ -3,8 +3,7 @@ import RecentPosts from '../components/RecentPosts'
 import { Page, SidebarArea, ContentArea } from '../styles/layout'
 import Sidebar from '../components/Sidebar'
 import { Blog } from '../styles/blog'
-import { css } from 'emotion'
-import { h1 } from '../styles/elements'
+import { h1, linkWithNoStyles } from '../styles/elements'
 import Helmet from 'react-helmet'
 import FacebookLogo from '../assets/Facebook.svg'
 import LinkedInLogo from '../assets/LinkedIn.svg'
@@ -49,13 +48,7 @@ export default function Template({ data }) {
         {/* Content goes first for seo */}
         <ContentArea>
           <Blog>
-            <h1
-              className={css`
-                ${h1};
-              `}
-            >
-              {frontmatter.title}
-            </h1>
+            <h1 className={h1}>{frontmatter.title}</h1>
             <date>{frontmatter.date}</date>
             <div dangerouslySetInnerHTML={{ __html: html }} />
             {/* sharing buttons from:  */}
@@ -71,6 +64,7 @@ export default function Template({ data }) {
                     target="_blank"
                     title="Tweet"
                     rel="noopener"
+                    className={linkWithNoStyles}
                   >
                     <img alt="Tweet" src={TwitterLogo} />
                   </a>
@@ -85,6 +79,7 @@ export default function Template({ data }) {
                     target="_blank"
                     title="Share on LinkedIn"
                     rel="noopener"
+                    className={linkWithNoStyles}
                   >
                     <img alt="Share on LinkedIn" src={LinkedInLogo} />
                   </a>
@@ -97,6 +92,7 @@ export default function Template({ data }) {
                     title="Share on Facebook"
                     target="_blank"
                     rel="noopener"
+                    className={linkWithNoStyles}
                   >
                     <img alt="Share on Facebook" src={FacebookLogo} />
                   </a>

@@ -6,6 +6,7 @@ import { BlogPreview } from '../styles/blog'
 import { h1 } from '../styles/elements'
 import { css } from 'emotion'
 import { mobile } from '../styles/breakpoints'
+import { linkWithNoStyles } from '../styles/elements'
 
 const spacingMedium = '40px'
 
@@ -89,7 +90,7 @@ const More = styled('div')`
   }
 `
 
-const Button = styled(Link)`
+const button = css`
   grid-column: 2;
   padding: 10px 20px;
   border: 3px solid ${orange};
@@ -120,7 +121,11 @@ const PostPreview = props => {
 
   return (
     <BlogPreview>
-      <HeaderLink to={post.frontmatter.path} style={{ textDecoration: 'none' }}>
+      <HeaderLink
+        to={post.frontmatter.path}
+        style={{ textDecoration: 'none' }}
+        className={linkWithNoStyles}
+      >
         <h2 className={header}>{post.frontmatter.title}</h2>
       </HeaderLink>
       <ColorDiv />
@@ -132,7 +137,14 @@ const PostPreview = props => {
         dangerouslySetInnerHTML={{ __html: post.html.substr(0, firstH2Index) }}
       />
       <More>
-        <Button to={post.frontmatter.path}>Read More</Button>
+        <Link
+          to={post.frontmatter.path}
+          className={css`
+            ${linkWithNoStyles} ${button};
+          `}
+        >
+          Read More
+        </Link>
       </More>
     </BlogPreview>
   )

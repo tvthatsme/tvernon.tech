@@ -8,3 +8,11 @@ export const h1 = css`
   color: ${grey};
   margin: 0 0 40px;
 `
+
+export const linkWithNoStyles = css`
+  box-shadow: none;
+
+  &:hover {
+    background: none;
+  }
+`

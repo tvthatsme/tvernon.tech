@@ -1,4 +1,4 @@
-import { grey } from '../styles/colors'
+import { grey, orange, lightOrange } from '../styles/colors'
 import { injectGlobal } from 'emotion'
 import { mobile } from '../styles/breakpoints'
 
@@ -53,7 +53,28 @@ const injectGlobalStyles = () => {
   }
 
   p {
+    color: ${grey};
     margin: 12pt 0;
+  }
+
+  a {
+    border-color: ${grey};
+    box-shadow: inset 0 -3px 0 ${orange};
+    padding-bottom: 2px;
+    padding-top: 2px;
+    transition: all 0.25s linear;
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+      color: ${grey};
+      text-decoration: none;
+    }
+
+    &:hover {
+      background: ${lightOrange};
+      text-decoration: none;
+    }
   }
 
   pre[class*="language-"] {
