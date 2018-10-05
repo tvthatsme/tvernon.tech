@@ -27,7 +27,7 @@ export default function Experience() {
   return (
     <Page>
       <Helmet>
-        <html lang="en" />
+        <title>Experience | Timothy Vernon</title>
         <meta
           name="description"
           content="Timothy Vernon Experience and Resume"

@@ -42,8 +42,7 @@ export default function Template({ data }) {
   return (
     <div>
       <Helmet>
-        <html lang="en" />
-        <title>{`${frontmatter.title} | TVernon Tech`}</title>
+        <title>{`${frontmatter.title} | Timothy Vernon`}</title>
         <meta name="description" content={frontmatter.description} />
       </Helmet>
       <Page>

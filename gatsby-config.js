@@ -2,6 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'Timothy Vernon - Tech',
     siteUrl: 'https://tvernon.tech',
+    quickDescription:
+      'I build beautiful, modern web applications with Javascript. This is my website where I write about what I am learning and my experiences.',
   },
   plugins: [
     'gatsby-plugin-sitemap',
