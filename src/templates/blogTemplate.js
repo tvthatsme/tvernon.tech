@@ -68,7 +68,7 @@ export default function Template({ data }) {
           name="twitter:url"
           content={`${data.site.siteMetadata.siteUrl}${frontmatter.path}`}
         />
-        <meta property="twitter:image" content={image} />
+        <meta name="twitter:image" content={image} />
       </Helmet>
       <Page>
         {/* Content goes first for seo */}
