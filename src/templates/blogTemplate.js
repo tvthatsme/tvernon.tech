@@ -32,24 +32,53 @@ const ShareButtons = styled('ul')`
   }
 `
 
+const Date = styled('time')`
+  display: block;
+  margin-bottom: 28pt;
+  font-size: 14pt;
+  font-style: italic;
+`
+
 export default function Template({ data }) {
   const { markdownRemark, allMarkdownRemark } = data
   const { frontmatter, html } = markdownRemark
   const postUrl = `${data.site.siteMetadata.siteUrl}${
     frontmatter.path
   }`.replace(/(^\w+:|^)\/\//, '')
+  const title = `${frontmatter.title} | Timothy Vernon`
+  const image =
+    'https://res.cloudinary.com/vernon-cloud/image/upload/f_auto,q_auto,w_400/v1530884463/Timothy_Headshot_25.12.2016_b4g1ak.jpg'
   return (
     <div>
       <Helmet>
-        <title>{`${frontmatter.title} | Timothy Vernon`}</title>
+        <title>{title}</title>
         <meta name="description" content={frontmatter.description} />
+        <meta property="og:title" content={title} />
+        <meta
+          property="og:url"
+          content={`${data.site.siteMetadata.siteUrl}${frontmatter.path}`}
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content={frontmatter.description} />
+        <meta property="og:image" content={image} />
+        <meta name="twitter:card" content="summary" />
+        <meta property="twitter:title" content={title} />
+        <meta
+          property="twitter:description"
+          content={frontmatter.description}
+        />
+        <meta
+          property="twitter:url"
+          content={`${data.site.siteMetadata.siteUrl}${frontmatter.path}`}
+        />
+        <meta property="twitter:image" content={image} />
       </Helmet>
       <Page>
         {/* Content goes first for seo */}
         <ContentArea>
           <Blog>
             <h1 className={h1}>{frontmatter.title}</h1>
-            <date>{frontmatter.date}</date>
+            <Date>{frontmatter.date}</Date>
             <div dangerouslySetInnerHTML={{ __html: html }} />
             {/* sharing buttons from:  */}
             {/* https://simplesharingbuttons.com/ */}

@@ -4,7 +4,7 @@ import { orange } from './colors'
 import { h1 } from './elements'
 import { mobile } from './breakpoints'
 
-export const Blog = styled('div')`
+export const Blog = styled('article')`
   background-color: white;
   padding: 100px 120px;
 
