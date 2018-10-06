@@ -62,13 +62,10 @@ export default function Template({ data }) {
         <meta property="og:description" content={frontmatter.description} />
         <meta property="og:image" content={image} />
         <meta name="twitter:card" content="summary" />
-        <meta property="twitter:title" content={title} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={frontmatter.description} />
         <meta
-          property="twitter:description"
-          content={frontmatter.description}
-        />
-        <meta
-          property="twitter:url"
+          name="twitter:url"
           content={`${data.site.siteMetadata.siteUrl}${frontmatter.path}`}
         />
         <meta property="twitter:image" content={image} />
