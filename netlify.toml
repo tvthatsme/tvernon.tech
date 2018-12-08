@@ -1,0 +1,2 @@
+[build]
+  environment = { GA_VIEW_ID = "ga:182655135" }
