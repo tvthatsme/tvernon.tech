@@ -6,8 +6,8 @@
   "private": true,
   "dependencies": {
     "@octokit/rest": "16.2.0",
-    "emotion": "9.2.12",
-    "emotion-server": "9.2.12",
+    "emotion": "10.0.5",
+    "emotion-server": "10.0.5",
     "gatsby": "1.9.279",
     "gatsby-link": "1.6.46",
     "gatsby-plugin-emotion": "1.1.17",
