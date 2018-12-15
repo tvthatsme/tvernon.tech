@@ -1,6 +1,6 @@
 import React from 'react'
 import { css } from 'emotion'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import Hello from '../components/Hello'
 import { grey, black } from '../styles/colors'
 import { linkWithNoStyles } from '../styles/elements'
