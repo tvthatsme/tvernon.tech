@@ -1,9 +1,11 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import PostPreview from '../components/PostPreview'
 import Sidebar from '../components/Sidebar'
 import { Page, SidebarArea, ContentArea } from '../styles/layout'
 import injectGlobalStyles from '../styles/global'
 import Social from '../components/Social'
+import { graphql } from 'gatsby'
 
 injectGlobalStyles()
 
@@ -11,6 +13,14 @@ export default function Index({ data }) {
   const { edges: posts } = data.allMarkdownRemark
   return (
     <Page>
+      <Helmet>
+        <html lang="en" />
+        <title>Timothy Vernon | Frontend Developer</title>
+        <meta
+          name="description"
+          content={data.site.siteMetadata.quickDescription}
+        />
+      </Helmet>
       <SidebarArea>
         <Sidebar />
         <Social />
@@ -39,6 +49,12 @@ export const pageQuery = graphql`
             path
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
+        quickDescription
       }
     }
   }

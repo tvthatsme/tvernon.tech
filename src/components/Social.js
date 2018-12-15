@@ -45,7 +45,7 @@ const Social = () => {
           style={LogoStyle}
           target="_blank"
           href="https://github.com/tvthatsme"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           <LogoImg src={githubLogo} alt="My Github Profile" />
         </a>
@@ -53,7 +53,7 @@ const Social = () => {
           style={LinkedIn}
           target="_blank"
           href="https://linkedin.com/in/tnvernon"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           <LogoImg
             src={linkedInLogo}
@@ -65,7 +65,7 @@ const Social = () => {
           style={Twitter}
           target="_blank"
           href="https://twitter.com/tvernon_tech"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           <LogoImg
             src={twitterLogo}
