@@ -10,6 +10,10 @@ import LinkedInLogo from '../assets/LinkedIn.svg'
 import TwitterLogo from '../assets/Twitter.svg'
 import styled from 'react-emotion'
 import Social from '../components/Social'
+import { graphql } from 'gatsby'
+
+// require styles for code syntax highlighting
+require('prismjs/themes/prism-okaidia.css')
 
 const ShareSection = styled('div')`
   display: flex;
@@ -51,6 +55,7 @@ export default function Template({ data }) {
   return (
     <div>
       <Helmet>
+        <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={frontmatter.description} />
         <meta property="og:title" content={title} />
@@ -89,7 +94,7 @@ export default function Template({ data }) {
                     }:%20https%3A%2F%2F${postUrl}`}
                     target="_blank"
                     title="Tweet"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     className={linkWithNoStyles}
                   >
                     <img alt="Tweet" src={TwitterLogo} />
@@ -104,7 +109,7 @@ export default function Template({ data }) {
                     }&source=https%3A%2F%2F${postUrl}`}
                     target="_blank"
                     title="Share on LinkedIn"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     className={linkWithNoStyles}
                   >
                     <img alt="Share on LinkedIn" src={LinkedInLogo} />
@@ -117,7 +122,7 @@ export default function Template({ data }) {
                     }`}
                     title="Share on Facebook"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     className={linkWithNoStyles}
                   >
                     <img alt="Share on Facebook" src={FacebookLogo} />

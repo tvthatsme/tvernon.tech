@@ -27,6 +27,7 @@ export default function Experience() {
   return (
     <Page>
       <Helmet>
+        <html lang="en" />
         <title>Experience | Timothy Vernon</title>
         <meta
           name="description"
@@ -78,7 +79,11 @@ export default function Experience() {
           </p>
           <p>
             My work can be found all over{' '}
-            <a href="https://www.emirates.com" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.emirates.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               emirates.com
             </a>
             . I worked with Emirates Airlines on their website as a consultant
@@ -91,7 +96,7 @@ export default function Experience() {
               <a
                 href="https://react.amsterdam"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 React Amsterdam 2017
               </a>
@@ -100,7 +105,7 @@ export default function Experience() {
               <a
                 href="https://www.react-europe.org"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 React Europe 2018
               </a>
@@ -144,7 +149,7 @@ export default function Experience() {
               <a
                 href="https://conferences.oreilly.com/fluent"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 O'Reilly Fluent Conference
               </a>{' '}
