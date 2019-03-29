@@ -6,7 +6,7 @@
   "private": true,
   "dependencies": {
     "@emotion/core": "10.0.6",
-    "@octokit/rest": "16.2.0",
+    "@octokit/rest": "16.21.1",
     "emotion": "9.2.12",
     "emotion-server": "9.2.12",
     "gatsby": "2.0.67",
