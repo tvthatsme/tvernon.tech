@@ -50,9 +50,9 @@ As explained in the above linked article, each iteration of map provides [3 argu
 
 Okay, so that is why `parseInt` doesn’t work for us out of the box in mapping over an array of strings. What can we do about it?
 
-### The power of tactic programming
+### The power of tacit programming
 
-There is a paradigm in compueter science called [tactic-programming](https://en.wikipedia.org/wiki/Tacit_programming) (sometimes referred to as "point-free") that is commonly employed in functional programming. Similarly to how UNIX pipes work, each function accepts only one argument but then can composed together to form more complex functions. If employed right, this paradigm can really simplify things.
+There is a paradigm in computer science called [tacit-programming](https://en.wikipedia.org/wiki/Tacit_programming) (sometimes referred to as "point-free") that is commonly employed in functional programming. Similarly to how UNIX pipes work, each function accepts only one argument but then can composed together to form more complex functions. If employed right, this paradigm can really simplify things.
 
 Now that we know why we can't just `parseInt` on every mapped value of the string array, we recognize that maybe a point-free approach might help us here. After all when calling `array.map`, the first argument passed to the callback is the current value that we are interested in sending on to `parseInt`. We don't care about the array's index or the array itself - just the current value.
 
