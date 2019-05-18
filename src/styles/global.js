@@ -82,7 +82,7 @@ const injectGlobalStyles = () => {
 
   /* Inline code snippets encosed by single backticks */
   :not(pre) > code[class*="language-"] {
-    background-color: #ddd;
+    background-color: #ddd !important;
     color: ${grey};
     text-shadow: none;
   }
