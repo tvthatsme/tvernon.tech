@@ -1,6 +1,5 @@
 import { grey, orange, lightOrange } from '../styles/colors'
 import { injectGlobal } from 'emotion'
-import { mobile } from '../styles/breakpoints'
 
 const injectGlobalStyles = () => {
   injectGlobal`
@@ -35,14 +34,6 @@ const injectGlobalStyles = () => {
     font-size: 20pt;
     margin: 20pt 0;
     color: ${grey};
-  }
-
-  h1,
-  h2,
-  h3 {
-    @media (max-width: ${mobile}) {
-      text-align: center;
-    }
   }
 
   li,
@@ -87,6 +78,13 @@ const injectGlobalStyles = () => {
 
   pre[class*="language-"] {
     border-radius: 0;
+  }
+
+  /* Inline code snippets encosed by single backticks */
+  :not(pre) > code[class*="language-"] {
+    background-color: #ddd;
+    color: ${grey};
+    text-shadow: none;
   }
 `
 }
