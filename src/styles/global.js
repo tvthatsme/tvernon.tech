@@ -36,6 +36,10 @@ const injectGlobalStyles = () => {
     color: ${grey};
   }
 
+  ul {
+    padding-left: 24px;
+  }
+
   li,
   p {
     font-size: 14pt;
@@ -86,6 +90,35 @@ const injectGlobalStyles = () => {
     color: ${grey};
     text-shadow: none;
   }
+
+  .gatsby-highlight {
+    background-color: #272822;
+    border-radius: 0.3em;
+    margin: 0.5em 0;
+    padding: 1em;
+    overflow: auto;
+  }
+
+  .gatsby-highlight pre[class*="language-"] {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    overflow: initial;
+    float: left;
+    min-width: 100%;
+  }
+
+  .gatsby-highlight-code-line {
+    background-color: #444;
+    display: block;
+    margin-right: -1em;
+    margin-left: -1em;
+    padding-right: 1em;
+    padding-left: 0.75em;
+    border-left: 6px solid ${orange};
+  }
+
+
 `
 }
 
