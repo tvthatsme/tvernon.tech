@@ -10,6 +10,7 @@ export const Page = styled('div')`
   @media (max-width: ${mobile}) {
     grid-template-columns: 100%;
     grid-template-rows: auto auto;
+    grid-gap: 0;
   }
 `
 

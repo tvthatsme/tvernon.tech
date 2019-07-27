@@ -1,4 +1,5 @@
 import { grey, orange, lightOrange } from '../styles/colors'
+import { experience, mobile } from './breakpoints'
 import { injectGlobal } from 'emotion'
 
 const injectGlobalStyles = () => {
@@ -28,6 +29,10 @@ const injectGlobalStyles = () => {
     line-height: 1.2;
     margin: 30pt 0;
     color: ${grey};
+
+    @media (max-width: ${experience}) {
+      font-size: 20pt;
+    }
   }
 
   h3 {
@@ -97,6 +102,17 @@ const injectGlobalStyles = () => {
     margin: 0.5em 0;
     padding: 1em;
     overflow: auto;
+
+    @media (max-width: ${mobile}) {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      border-radius: 0;
+      font-size: 11pt;
+    }
   }
 
   .gatsby-highlight pre[class*="language-"] {

@@ -1,4 +1,5 @@
 import { css } from 'emotion'
+import { experience } from './breakpoints'
 import { grey } from './colors'
 
 export const h1 = css`
@@ -7,6 +8,10 @@ export const h1 = css`
   line-height: 1.1;
   color: ${grey};
   margin: 0 0 40px;
+
+  @media (max-width: ${experience}) {
+    font-size: 30pt;
+  }
 `
 
 export const linkWithNoStyles = css`
