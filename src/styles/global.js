@@ -111,7 +111,7 @@ const injectGlobalStyles = () => {
       margin-left: -50vw;
       margin-right: -50vw;
       border-radius: 0;
-      font-size: 11pt;
+      font-size: 12px;
     }
   }
 
