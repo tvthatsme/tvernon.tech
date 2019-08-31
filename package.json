@@ -5,7 +5,7 @@
   "author": "Timothy Vernon <timothy.n.vernon@gmail.com>",
   "private": true,
   "dependencies": {
-    "@emotion/core": "10.0.6",
+    "@emotion/core": "10.0.17",
     "@octokit/rest": "16.21.1",
     "emotion": "9.2.12",
     "emotion-server": "9.2.12",
