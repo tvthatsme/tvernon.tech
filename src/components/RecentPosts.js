@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { css } from 'emotion'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { grey, orange } from '../styles/colors'
 import { linkWithNoStyles } from '../styles/elements'
 

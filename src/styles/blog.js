@@ -1,4 +1,4 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { css } from 'emotion'
 import { orange } from './colors'
 import { h1 } from './elements'

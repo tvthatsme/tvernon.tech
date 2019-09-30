@@ -8,7 +8,7 @@ import Helmet from 'react-helmet'
 import FacebookLogo from '../assets/Facebook.svg'
 import LinkedInLogo from '../assets/LinkedIn.svg'
 import TwitterLogo from '../assets/Twitter.svg'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import Social from '../components/Social'
 import { graphql } from 'gatsby'
 

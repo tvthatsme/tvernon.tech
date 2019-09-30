@@ -7,7 +7,7 @@ import { LargeTextBlock } from '../styles/blog'
 import { experience } from '../styles/breakpoints'
 import LogoTigerspike from '../assets/experience-logos/tigerspike.png'
 import LogoFlowserve from '../assets/experience-logos/flowserve.svg'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 const TimePeriod = styled('p')`
   font-style: italic;

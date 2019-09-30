@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { orange, blue, grey } from '../styles/colors'
 import { BlogPreview } from '../styles/blog'
 import { h1 } from '../styles/elements'
