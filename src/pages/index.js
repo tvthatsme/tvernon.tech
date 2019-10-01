@@ -9,6 +9,9 @@ import { graphql } from 'gatsby'
 import { Global } from '@emotion/core'
 import globalStyles from '../styles/global'
 
+// require styles for code syntax highlighting
+require('prismjs/themes/prism-okaidia.css')
+
 export default function Index({ data }) {
   const { edges: posts } = data.allMarkdownRemark
   return (
