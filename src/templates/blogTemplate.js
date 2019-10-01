@@ -11,6 +11,8 @@ import TwitterLogo from '../assets/Twitter.svg'
 import styled from '@emotion/styled'
 import Social from '../components/Social'
 import { graphql } from 'gatsby'
+import { Global } from '@emotion/core'
+import globalStyles from '../styles/global'
 
 // require styles for code syntax highlighting
 require('prismjs/themes/prism-okaidia.css')
@@ -75,6 +77,7 @@ export default function Template({ data }) {
         />
         <meta name="twitter:image" content={image} />
       </Helmet>
+      <Global styles={globalStyles} />
       <Page>
         {/* Content goes first for seo */}
         <ContentArea>

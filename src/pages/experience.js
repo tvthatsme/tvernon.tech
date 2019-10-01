@@ -8,6 +8,8 @@ import { experience } from '../styles/breakpoints'
 import LogoTigerspike from '../assets/experience-logos/tigerspike.png'
 import LogoFlowserve from '../assets/experience-logos/flowserve.svg'
 import styled from '@emotion/styled'
+import { Global } from '@emotion/core'
+import globalStyles from '../styles/global'
 
 const TimePeriod = styled('p')`
   font-style: italic;
@@ -34,6 +36,7 @@ export default function Experience() {
           content="Timothy Vernon Experience and Resume"
         />
       </Helmet>
+      <Global styles={globalStyles} />
       <SidebarArea>
         <Sidebar />
       </SidebarArea>

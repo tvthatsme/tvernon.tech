@@ -2,6 +2,8 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Sidebar from '../components/Sidebar'
 import { Page, SidebarArea, ContentArea } from '../styles/layout'
+import { Global } from '@emotion/core'
+import globalStyles from '../styles/global'
 
 export default function About() {
   return (
@@ -10,6 +12,7 @@ export default function About() {
         <title>About Timothy Vernon | Timothy Vernon</title>
         <meta name="description" content="Timothy Vernon About" />
       </Helmet>
+      <Global styles={globalStyles} />
       <SidebarArea>
         <Sidebar />
       </SidebarArea>

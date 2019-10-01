@@ -3,11 +3,11 @@ import Helmet from 'react-helmet'
 import PostPreview from '../components/PostPreview'
 import Sidebar from '../components/Sidebar'
 import { Page, SidebarArea, ContentArea } from '../styles/layout'
-import injectGlobalStyles from '../styles/global'
+
 import Social from '../components/Social'
 import { graphql } from 'gatsby'
-
-injectGlobalStyles()
+import { Global } from '@emotion/core'
+import globalStyles from '../styles/global'
 
 export default function Index({ data }) {
   const { edges: posts } = data.allMarkdownRemark
@@ -21,6 +21,7 @@ export default function Index({ data }) {
           content={data.site.siteMetadata.quickDescription}
         />
       </Helmet>
+      <Global styles={globalStyles} />
       <SidebarArea>
         <Sidebar />
         <Social />
