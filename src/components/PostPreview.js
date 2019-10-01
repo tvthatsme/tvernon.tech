@@ -4,15 +4,16 @@ import styled from '@emotion/styled'
 import { orange, blue, grey } from '../styles/colors'
 import { BlogPreview } from '../styles/blog'
 import { h1 } from '../styles/elements'
-import { css } from 'emotion'
 import { mobile } from '../styles/breakpoints'
 import { linkWithNoStyles } from '../styles/elements'
 
 const spacingMedium = '40px'
 
 const HeaderLink = styled(Link)`
+  ${linkWithNoStyles};
   grid-column: 1 / span 2;
   grid-row: 1;
+  text-decoration: none;
 
   @media (max-width: ${mobile}) {
     grid-column: 1;
@@ -20,11 +21,11 @@ const HeaderLink = styled(Link)`
   }
 `
 
-const header = css`
+const Header = styled.h2`
   ${h1};
 `
 
-const ColorDiv = styled('div')`
+const ColorDiv = styled.div`
   grid-row: 1 / span 3;
   grid-column: 1;
   z-index: 1;
@@ -39,7 +40,7 @@ const ColorDiv = styled('div')`
   }
 `
 
-const Date = styled('p')`
+const Date = styled.p`
   grid-column: 1;
   grid-row: 2;
   text-align: center;
@@ -50,7 +51,7 @@ const Date = styled('p')`
   padding-top: 5px;
 `
 
-const DayAndMonth = styled('span')`
+const DayAndMonth = styled.span`
   display: block;
   width: 100%;
   font-size: 16px;
@@ -58,13 +59,13 @@ const DayAndMonth = styled('span')`
   padding-bottom: 3px;
 `
 
-const Year = styled('span')`
+const Year = styled.span`
   display: block;
   width: 100%;
   font-weight: 300;
 `
 
-const ShortDescription = styled('div')`
+const ShortDescription = styled.div`
   grid-column: 2;
   grid-row: 2;
   max-width: 600px;
@@ -79,7 +80,7 @@ const ShortDescription = styled('div')`
   }
 `
 
-const More = styled('div')`
+const More = styled.div`
   grid-column: 2;
   display: flex;
   flex-direction: row-reverse;
@@ -90,7 +91,8 @@ const More = styled('div')`
   }
 `
 
-const button = css`
+const ReadMoreButton = styled(Link)`
+  ${linkWithNoStyles}
   grid-column: 2;
   padding: 10px 20px;
   border: 3px solid ${orange};
@@ -121,12 +123,8 @@ const PostPreview = props => {
 
   return (
     <BlogPreview>
-      <HeaderLink
-        to={post.frontmatter.path}
-        style={{ textDecoration: 'none' }}
-        className={linkWithNoStyles}
-      >
-        <h2 className={header}>{post.frontmatter.title}</h2>
+      <HeaderLink to={post.frontmatter.path}>
+        <Header>{post.frontmatter.title}</Header>
       </HeaderLink>
       <ColorDiv />
       <Date>
@@ -137,14 +135,7 @@ const PostPreview = props => {
         dangerouslySetInnerHTML={{ __html: post.html.substr(0, firstH2Index) }}
       />
       <More>
-        <Link
-          to={post.frontmatter.path}
-          className={css`
-            ${linkWithNoStyles} ${button};
-          `}
-        >
-          Read More
-        </Link>
+        <ReadMoreButton to={post.frontmatter.path}>Read More</ReadMoreButton>
       </More>
     </BlogPreview>
   )

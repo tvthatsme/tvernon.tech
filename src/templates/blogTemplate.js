@@ -17,13 +17,21 @@ import globalStyles from '../styles/global'
 // require styles for code syntax highlighting
 require('prismjs/themes/prism-okaidia.css')
 
-const ShareSection = styled('div')`
+const Header = styled.h1`
+  ${h1};
+`
+
+const SocialLink = styled.a`
+  ${linkWithNoStyles};
+`
+
+const ShareSection = styled.div`
   display: flex;
   flex-direction: row;
   padding-top: 40px;
 `
 
-const ShareButtons = styled('ul')`
+const ShareButtons = styled.ul`
   list-style: none;
   margin: 16px 0 0 0;
 
@@ -38,7 +46,7 @@ const ShareButtons = styled('ul')`
   }
 `
 
-const Date = styled('time')`
+const Date = styled.time`
   display: block;
   margin-bottom: 28pt;
   font-size: 14pt;
@@ -82,7 +90,7 @@ export default function Template({ data }) {
         {/* Content goes first for seo */}
         <ContentArea>
           <Blog>
-            <h1 className={h1}>{frontmatter.title}</h1>
+            <Header>{frontmatter.title}</Header>
             <Date>{frontmatter.date}</Date>
             <div dangerouslySetInnerHTML={{ __html: html }} />
             {/* sharing buttons from:  */}
@@ -91,20 +99,19 @@ export default function Template({ data }) {
               <p>Like what you've read? Give a share:</p>
               <ShareButtons>
                 <li>
-                  <a
+                  <SocialLink
                     href={`https://twitter.com/intent/tweet?source=https%3A%2F%2F${postUrl}&text=${
                       frontmatter.title
                     }:%20https%3A%2F%2F${postUrl}`}
                     target="_blank"
                     title="Tweet"
                     rel="noopener noreferrer"
-                    className={linkWithNoStyles}
                   >
                     <img alt="Tweet" src={TwitterLogo} />
-                  </a>
+                  </SocialLink>
                 </li>
                 <li>
-                  <a
+                  <SocialLink
                     href={`http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2F${postUrl}&title=${
                       frontmatter.title
                     }&summary=${
@@ -113,23 +120,21 @@ export default function Template({ data }) {
                     target="_blank"
                     title="Share on LinkedIn"
                     rel="noopener noreferrer"
-                    className={linkWithNoStyles}
                   >
                     <img alt="Share on LinkedIn" src={LinkedInLogo} />
-                  </a>
+                  </SocialLink>
                 </li>
                 <li>
-                  <a
+                  <SocialLink
                     href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F${postUrl}&quote=${
                       frontmatter.title
                     }`}
                     title="Share on Facebook"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={linkWithNoStyles}
                   >
                     <img alt="Share on Facebook" src={FacebookLogo} />
-                  </a>
+                  </SocialLink>
                 </li>
               </ShareButtons>
             </ShareSection>
@@ -138,6 +143,7 @@ export default function Template({ data }) {
         {/* Navigation and other links go second */}
         <SidebarArea>
           <Sidebar isPrimary={false} />
+          <p>Test</p>
           <RecentPosts posts={allMarkdownRemark} />
           <Social />
         </SidebarArea>

@@ -1,6 +1,5 @@
 import React from 'react'
 import { h1 } from '../styles/elements'
-import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 
 const Section = styled.div`
@@ -9,12 +8,8 @@ const Section = styled.div`
   padding: 50px 40px;
   color: white;
 `
-const Heading1 = styled.h1`
-  color: white;
-  margin: 0;
-`
-
-const Heading2 = styled.h2`
+const Heading = styled.h1`
+  ${h1};
   color: white;
   margin: 0;
 `
@@ -37,14 +32,14 @@ const Image = styled.img`
   padding: 5px;
 `
 
-const Hello = (headingLevel1 = true) => {
+const Hello = ({ headingLevel1 = true }) => {
   return (
     <div>
       <Section>
         {headingLevel1 ? (
-          <Heading1>Hello.</Heading1>
+          <Heading>Hello.</Heading>
         ) : (
-          <Heading2>Hello.</Heading2>
+          <Heading as="h2">Hello.</Heading>
         )}
         <SubHeading>I'm Timothy Vernon</SubHeading>
         <Image

@@ -1,22 +1,22 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { css } from 'emotion'
 import styled from '@emotion/styled'
 import { grey, orange } from '../styles/colors'
 import { linkWithNoStyles } from '../styles/elements'
 
-const Aside = styled('aside')`
+const Aside = styled.aside`
   padding: 20px 40px;
 `
 
-const Heading = styled('h2')`
+const Heading = styled.h2`
   margin-top: -20px;
   padding-bottom: 12pt;
   font-size: 20pt;
   border-bottom: 1px solid ${grey};
 `
 
-const link = css`
+const LinkToPost = styled(Link)`
+  ${linkWithNoStyles};
   display: block;
   padding-bottom: 10px;
   text-decoration: none;
@@ -31,13 +31,17 @@ const link = css`
   }
 `
 
-const titleText = css`
+const LinkTitle = styled.p`
   margin-top: 0;
   font-weight: 500;
   text-decoration: underline;
 `
 
-const smallText = css`
+const LinkTitleWithNoHelp = styled(LinkTitle)`
+  margin-bottom: 0;
+`
+
+const LinkHelpText = styled.p`
   font-size: 12pt;
   margin-bottom: 0;
   font-style: italic;
@@ -52,52 +56,16 @@ const RecentPosts = props => {
         const { date, path, title, description } = post.node.frontmatter
         const { id } = post.node
         return (
-          <Link
-            className={css`
-              ${linkWithNoStyles} ${link};
-            `}
-            to={path}
-            key={id}
-          >
-            <p
-              className={css`
-                ${titleText};
-              `}
-            >
-              {title}
-            </p>
-            <p
-              className={css`
-                ${smallText};
-              `}
-            >
-              {date}
-            </p>
-            <p
-              className={css`
-                ${smallText};
-              `}
-            >
-              {description}
-            </p>
-          </Link>
+          <LinkToPost to={path} key={id}>
+            <LinkTitle>{title}</LinkTitle>
+            <LinkHelpText>{date}</LinkHelpText>
+            <LinkHelpText>{description}</LinkHelpText>
+          </LinkToPost>
         )
       })}
-      <Link
-        to="/"
-        className={css`
-          ${linkWithNoStyles} ${link};
-        `}
-      >
-        <p
-          className={css`
-            ${titleText};
-            margin-bottom: 0;
-          `}
-        >
-          All Posts
-        </p>
-      </Link>
+      <LinkToPost to="/">
+        <LinkTitleWithNoHelp>All Posts</LinkTitleWithNoHelp>
+      </LinkToPost>
     </Aside>
   )
 }

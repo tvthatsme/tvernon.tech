@@ -41,7 +41,7 @@ export default function Experience() {
         <Sidebar />
       </SidebarArea>
       <ContentArea>
-        <div className={LargeTextBlock}>
+        <LargeTextBlock>
           <h1>Experience</h1>
           <p>
             I am an experienced software developer with five years of software
@@ -54,8 +54,8 @@ export default function Experience() {
             Below is a detailed listing of the places I've worked and the
             projects that I've contributed to:
           </p>
-        </div>
-        <div className={LargeTextBlock}>
+        </LargeTextBlock>
+        <LargeTextBlock>
           <ExperienceOverview
             startDate="July 2016"
             endDate="September 2018"
@@ -114,8 +114,8 @@ export default function Experience() {
               </a>
             </li>
           </List>
-        </div>
-        <div className={LargeTextBlock}>
+        </LargeTextBlock>
+        <LargeTextBlock>
           <ExperienceOverview
             startDate="February 2011"
             endDate="June 2016"
@@ -183,7 +183,7 @@ export default function Experience() {
             features intranet status, control, and configuration of networked
             hardware.
           </p>
-        </div>
+        </LargeTextBlock>
       </ContentArea>
     </Page>
   )

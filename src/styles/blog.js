@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { css } from 'emotion'
+import { css } from '@emotion/core'
 import { orange } from './colors'
 import { h1 } from './elements'
 import { mobile } from './breakpoints'
@@ -13,7 +13,7 @@ export const Blog = styled('article')`
   }
 `
 
-export const LargeTextBlock = css`
+export const LargeTextBlock = styled.div`
   margin-bottom: 80px;
   background-color: white;
   padding: 100px 120px;
@@ -25,7 +25,7 @@ export const LargeTextBlock = css`
   }
 `
 
-export const BlogPreview = styled('div')`
+export const BlogPreview = styled.div`
   display: grid;
   grid-template-columns: 1fr 6fr;
   grid-template-rows: 1fr auto auto;

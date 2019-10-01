@@ -1,16 +1,17 @@
 import React from 'react'
-import { css } from 'emotion'
+import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 import Hello from '../components/Hello'
 import { grey, black } from '../styles/colors'
 import { linkWithNoStyles } from '../styles/elements'
 
-const SideLinks = css`
+const SideLinks = styled.div`
   padding: 40px;
   margin-bottom: 20px;
 `
 
-const SideLink = css`
+const SidebarLink = styled(Link)`
+  ${linkWithNoStyles};
   display: block;
   padding: 20px 0;
   border-bottom: 1px solid ${grey};
@@ -27,37 +28,15 @@ const SideLink = css`
   }
 `
 
-const Sidebar = props => {
-  const { isPrimary = true } = props
+const Sidebar = ({ isPrimary = true }) => {
   return (
     <div>
       <Hello headingLevel1={isPrimary} />
-      <div className={SideLinks}>
-        <Link
-          to="/"
-          className={css`
-            ${linkWithNoStyles} ${SideLink};
-          `}
-        >
-          Home
-        </Link>
-        <Link
-          to="/about"
-          className={css`
-            ${linkWithNoStyles} ${SideLink};
-          `}
-        >
-          About
-        </Link>
-        <Link
-          to="/experience"
-          className={css`
-            ${linkWithNoStyles} ${SideLink};
-          `}
-        >
-          Experience
-        </Link>
-      </div>
+      <SideLinks>
+        <SidebarLink to="/">Home</SidebarLink>
+        <SidebarLink to="/about">About</SidebarLink>
+        <SidebarLink to="/experience">Experience</SidebarLink>
+      </SideLinks>
     </div>
   )
 }
