@@ -143,7 +143,6 @@ export default function Template({ data }) {
         {/* Navigation and other links go second */}
         <SidebarArea>
           <Sidebar isPrimary={false} />
-          <p>Test</p>
           <RecentPosts posts={allMarkdownRemark} />
           <Social />
         </SidebarArea>
