@@ -1,59 +1,52 @@
 import React from 'react'
-import { css } from 'emotion'
 import { h1 } from '../styles/elements'
+import styled from '@emotion/styled'
 
-const section = css`
+const Section = styled.div`
   position: relative;
   background-color: #ef7125;
   padding: 50px 40px;
   color: white;
 `
-
-const helloStyles = {
-  color: 'white',
-  margin: 0,
-}
-
-const heading = css`
-  ${h1} ${helloStyles};
+const Heading = styled.h1`
+  ${h1};
+  color: white;
+  margin: 0;
 `
 
-const subHeading = css`
+const SubHeading = styled.p`
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 24pt;
   color: white;
 `
 
-const image = {
-  position: 'absolute',
-  bottom: 0,
-  transform: 'translateY(50%)',
-  width: '140px',
-  height: '140px',
-  borderRadius: '100%',
-  backgroundColor: 'white',
-  padding: 5,
-}
+const Image = styled.img`
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  background-color: white;
+  padding: 5px;
+`
 
-const Hello = (headingLevel1 = true) => {
+const Hello = ({ headingLevel1 = true }) => {
   return (
     <div>
-      <div className={section}>
+      <Section>
         {headingLevel1 ? (
-          <h1 className={heading}>Hello.</h1>
+          <Heading>Hello.</Heading>
         ) : (
-          <h2 className={heading}>Hello.</h2>
+          <Heading as="h2">Hello.</Heading>
         )}
-        <p className={subHeading}>I'm Timothy Vernon</p>
-        <img
-          className={css`
-            ${image};
-          `}
+        <SubHeading>I'm Timothy Vernon</SubHeading>
+        <Image
           alt="Timothy Vernon"
           src="https://res.cloudinary.com/vernon-cloud/image/upload/f_auto,q_auto/v1530884463/Timothy_Headshot_25.12.2016_b4g1ak.jpg"
         />
-      </div>
+      </Section>
       <div style={{ backgroundColor: 'white', padding: '70px 40px 20px' }}>
         <p>
           I build beautiful, modern web applications with Javascript. This is my

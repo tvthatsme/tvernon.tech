@@ -8,16 +8,13 @@ module.exports = {
   plugins: [
     'gatsby-plugin-sitemap',
     'gatsby-plugin-react-helmet',
+    `gatsby-plugin-emotion`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/posts`,
         name: 'posts',
       },
-    },
-    {
-      resolve: 'gatsby-plugin-emotion',
-      options: {},
     },
     {
       resolve: `gatsby-transformer-remark`,

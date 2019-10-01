@@ -7,7 +7,9 @@ import { LargeTextBlock } from '../styles/blog'
 import { experience } from '../styles/breakpoints'
 import LogoTigerspike from '../assets/experience-logos/tigerspike.png'
 import LogoFlowserve from '../assets/experience-logos/flowserve.svg'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
+import { Global } from '@emotion/core'
+import globalStyles from '../styles/global'
 
 const TimePeriod = styled('p')`
   font-style: italic;
@@ -34,11 +36,12 @@ export default function Experience() {
           content="Timothy Vernon Experience and Resume"
         />
       </Helmet>
+      <Global styles={globalStyles} />
       <SidebarArea>
         <Sidebar />
       </SidebarArea>
       <ContentArea>
-        <div className={LargeTextBlock}>
+        <LargeTextBlock>
           <h1>Experience</h1>
           <p>
             I am an experienced software developer with five years of software
@@ -51,8 +54,8 @@ export default function Experience() {
             Below is a detailed listing of the places I've worked and the
             projects that I've contributed to:
           </p>
-        </div>
-        <div className={LargeTextBlock}>
+        </LargeTextBlock>
+        <LargeTextBlock>
           <ExperienceOverview
             startDate="July 2016"
             endDate="September 2018"
@@ -111,8 +114,8 @@ export default function Experience() {
               </a>
             </li>
           </List>
-        </div>
-        <div className={LargeTextBlock}>
+        </LargeTextBlock>
+        <LargeTextBlock>
           <ExperienceOverview
             startDate="February 2011"
             endDate="June 2016"
@@ -180,7 +183,7 @@ export default function Experience() {
             features intranet status, control, and configuration of networked
             hardware.
           </p>
-        </div>
+        </LargeTextBlock>
       </ContentArea>
     </Page>
   )

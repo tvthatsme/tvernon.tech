@@ -1,4 +1,4 @@
-import { css } from 'emotion'
+import { css } from '@emotion/core'
 import { experience } from './breakpoints'
 import { grey } from './colors'
 

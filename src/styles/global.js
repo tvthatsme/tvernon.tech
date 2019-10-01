@@ -1,9 +1,8 @@
 import { grey, orange, lightOrange } from '../styles/colors'
 import { experience, mobile } from './breakpoints'
-import { injectGlobal } from 'emotion'
+import { css } from '@emotion/core'
 
-const injectGlobalStyles = () => {
-  injectGlobal`
+const globalStyles = css`
   * {
     box-sizing: border-box;
     margin: 0;
@@ -12,7 +11,8 @@ const injectGlobalStyles = () => {
   }
 
   body {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+      sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     background-color: #eee;
   }
 
@@ -77,7 +77,7 @@ const injectGlobalStyles = () => {
     }
   }
 
-  pre[class*="language-"] {
+  pre[class*='language-'] {
     background-color: ${grey};
   }
 
@@ -85,12 +85,12 @@ const injectGlobalStyles = () => {
     font-size: 12pt;
   }
 
-  pre[class*="language-"] {
+  pre[class*='language-'] {
     border-radius: 0;
   }
 
-  /* Inline code snippets encosed by single backticks */
-  :not(pre) > code[class*="language-"] {
+  /* Inline code snippets enclosed by single back ticks */
+  :not(pre) > code[class*='language-'] {
     background-color: #ddd !important;
     color: ${grey};
     text-shadow: none;
@@ -115,7 +115,7 @@ const injectGlobalStyles = () => {
     }
   }
 
-  .gatsby-highlight pre[class*="language-"] {
+  .gatsby-highlight pre[class*='language-'] {
     background-color: transparent;
     margin: 0;
     padding: 0;
@@ -133,9 +133,6 @@ const injectGlobalStyles = () => {
     padding-left: 0.75em;
     border-left: 6px solid ${orange};
   }
-
-
 `
-}
 
-export default injectGlobalStyles
+export default globalStyles

@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { orange } from '../styles/colors'
 import linkedInLogo from '../assets/logo-linkedin.png'
 import githubLogo from '../assets/logo-github.png'
