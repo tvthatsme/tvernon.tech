@@ -77,6 +77,15 @@ const globalStyles = css`
     }
   }
 
+  /* Don't apply special link styles to anchors */
+  .anchor {
+    box-shadow: none;
+
+    &:hover {
+      background: none;
+    }
+  }
+
   pre[class*='language-'] {
     background-color: ${grey};
   }
