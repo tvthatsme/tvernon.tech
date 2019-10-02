@@ -4567,6 +4567,16 @@ gatsby-react-router-scroll@^2.1.11:
     scroll-behavior "^0.9.10"
     warning "^3.0.0"
 
+gatsby-remark-autolink-headers@2.1.13:
+  version "2.1.13"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.1.13.tgz#f707e6d5ab063aae368604edfae0c948e8154884"
+  dependencies:
+    "@babel/runtime" "^7.6.2"
+    github-slugger "^1.2.1"
+    lodash "^4.17.15"
+    mdast-util-to-string "^1.0.6"
+    unist-util-visit "^1.4.1"
+
 gatsby-remark-prismjs@3.3.16:
   version "3.3.16"
   resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-3.3.16.tgz#4b6b0d072f14d377de496e3c996ae45d0e053f75"
@@ -4846,6 +4856,12 @@ git-up@4.0.1:
 github-slugger@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/github-slugger/-/github-slugger-1.2.0.tgz#8ada3286fd046d8951c3c952a8d7854cfd90fd9a"
+  dependencies:
+    emoji-regex ">=6.0.0 <=6.1.1"
+
+github-slugger@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/github-slugger/-/github-slugger-1.2.1.tgz#47e904e70bf2dccd0014748142d31126cfd49508"
   dependencies:
     emoji-regex ">=6.0.0 <=6.1.1"
 
