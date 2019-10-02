@@ -74,7 +74,7 @@ By wrapping the `parseInt` function in a curried function, it is then possible t
 const getBase10Int = getIntWithRadix(10)
 ```
 
-See what we did there? We created a function for `parseInt` that has the radix predefined so now we only need to provide one argument to the function. Once we do this, we can then provide this curried function to the map and receive only one argument, the value at the index, which will result in the expected behaviour of mapping through an array of numbers in string format and then being able to call a type of `parseInt` function on each string.
+See what we did there? We created a function for `parseInt` that has the radix predefined so now we only need to provide one argument to the function. Once we do this, we can then provide this curried function to the map and receive only one argument, the value at the index, which will result in the expected behavior of mapping through an array of numbers in string format and then being able to call a type of `parseInt` function on each string.
 
 ## Putting it all together
 

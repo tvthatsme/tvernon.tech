@@ -2,7 +2,7 @@
 path: '/blog/react-custom-hook-for-forms'
 date: '2019-07-27'
 title: 'Writing your own React custom hooks'
-description: 'Any time you use a React hook method in a local component, it is a potential oppurtunity to create a custom hook function if that logic can be reused elsewhere. This article walks through the motivation and process of writing your own React custom hooks.'
+description: 'Any time you use a React hook method in a local component, it is a potential opportunity to create a custom hook function if that logic can be reused elsewhere. This article walks through the motivation and process of writing your own React custom hooks.'
 ---
 
 Hooks are hot right now in React. You might be writing your React components now using the hooks `useState`, `useEffect`, `useRef`, and others but the real power of hooks is being able to extract logic from one component and share that logic in other components across your application. Understanding how and when to write your own custom React hooks will enable you to extract reusable logic and even clean up your code a bit.
@@ -206,9 +206,9 @@ function MultiStepForm() {
 
 The added code is simple enough. Anytime there is a change event to any input element, mark that part "filled". Disable the "next" button until all the required inputs are filled. However, we've added a lot of code for a partial implementation of this feature. What happens if the user enters some text in an input, but then immediately clears it? We've already marked that input as "filled". In order to correct that, it might be a good idea to write some function that could handle this case for every input to keep things a little more [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
 
-Taking the time to write a function that can handle the input change event for every input is an oppurtunity to step back a bit and think about reusability. This might not be the only form in the project nor component to want a check that all required inputs have been filled.
+Taking the time to write a function that can handle the input change event for every input is an opportunity to step back a bit and think about reusability. This might not be the only form in the project nor component to want a check that all required inputs have been filled.
 
-_Any time you use a React hook method in a local component, it is a potential oppurtunity to create a custom hook function if that logic can be reused elsewhere._
+_Any time you use a React hook method in a local component, it is a potential opportunity to create a custom hook function if that logic can be reused elsewhere._
 
 Please note that this does not necessarily mean that you always should! Premature optimizations have a negative impact and can cost you or your team different ways. However, being able to see a pattern forming across several components and being able to extract that logic into a custom React hook function is very powerful. That's what we will do in this case.
 

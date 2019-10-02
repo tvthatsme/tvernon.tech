@@ -86,7 +86,7 @@ And fixing the warning truly was as simple as renaming `boundActionCreators` to 
 
 ## Remove gatsby-link package dependency
 
-This won’t throw a deprication warning during the build process but is a simple update. All the components and utility functions from the `gatsby-link` package are now exported from `gatsby` package so you don’t need to have that extra package dependency. Just replace `import Link from 'gatsby-link’` with `import { Link } from gatsby`. No breaking changes, but if you'd like to read about it, you can [here](https://www.gatsbyjs.org/docs/migrating-from-v1-to-v2/#import-link-from-gatsby).
+This won’t throw a deprecation warning during the build process but is a simple update. All the components and utility functions from the `gatsby-link` package are now exported from `gatsby` package so you don’t need to have that extra package dependency. Just replace `import Link from 'gatsby-link’` with `import { Link } from gatsby`. No breaking changes, but if you'd like to read about it, you can [here](https://www.gatsbyjs.org/docs/migrating-from-v1-to-v2/#import-link-from-gatsby).
 
 ## Refactor layout components
 
@@ -96,4 +96,4 @@ This move away from the `src/layouts/index.js` file as the top-level component f
 
 ## Launch and iterate
 
-After installing some dependencies, refactoring the eslint errors, and changing my approach to lop-level components, everthing was working again! The whole migration took me less than 10 minutes and was very straight forward. The console messages, whenever something didn't work, were very friendly and pointed me to exactly where I needed to fix something. Once again, thanks so much to the Gatsby team for all the hard work they've done with this project! I am looking forward to continuing to build out my site with the perfect combination of Gatsby and React.
+After installing some dependencies, refactoring the eslint errors, and changing my approach to lop-level components, everything was working again! The whole migration took me less than 10 minutes and was very straight forward. The console messages, whenever something didn't work, were very friendly and pointed me to exactly where I needed to fix something. Once again, thanks so much to the Gatsby team for all the hard work they've done with this project! I am looking forward to continuing to build out my site with the perfect combination of Gatsby and React.

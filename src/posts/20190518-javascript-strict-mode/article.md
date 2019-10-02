@@ -2,7 +2,7 @@
 path: '/blog/javascript-strict-mode'
 date: '2019-05-18'
 title: 'Does modern JavaScript need strict mode?'
-description: 'Is strict mode in JavaScript a thing of the past? It was once recommened to "use strict" everywhere but it seems much less common today. This article addresses when you need to consider turning strict mode on in modern JavaScript and why you might have seen less of it recently.'
+description: 'Is strict mode in JavaScript a thing of the past? It was once recommended to "use strict" everywhere but it seems much less common today. This article addresses when you need to consider turning strict mode on in modern JavaScript and why you might have seen less of it recently.'
 ---
 
 I was modifying some legacy code this past week, as most developers find themselves doing at some point in their employment. Now when I say legacy - it's pretty legacy. There was no build process, transpilation, or minification and all the JavaScript files were just imported one by one at the bottom of the index.html file. Remember those days? One of the things I noticed when getting familiar with the code was that for each function there was a “use strict” statement at the very beginning. Now I have to be honest, but the “use strict” statement at the beginning of a function or JavaScript file isn’t something that I’ve thought much about in the past few years. My recent professional work has been primarily in the Angular, React, and Vue frameworks and I haven't dealt with strict mode in JavaScript in any of the those projects to my memory. So I began thinking: does modern JavaScript need strict mode anymore? Why haven’t I been needing to add the `'use strict';` statement to my code recently? This article explains what I found:
@@ -66,7 +66,7 @@ Hopefully you now understand why strict mode is still a thing. Its very standard
 
 _Are you working on a react single page application?_
 
-You’re most likely completely in strict mode without you needing to do anything. Check out the [very base JavaScript file](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/src/index.js) in create-react-app. This index.js file is a module which is consumed by webpack and then injected into index.html. Everything for strict mode is handled automatically for you, not by React, but by modern JavaScript. It turns out there was a good reason that I was’t thinking about `'use strict';` recently!
+You’re most likely completely in strict mode without you needing to do anything. Check out the [very base JavaScript file](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/src/index.js) in create-react-app. This index.js file is a module which is consumed by webpack and then injected into index.html. Everything for strict mode is handled automatically for you, not by React, but by modern JavaScript. It turns out there was a good reason that I wasn’t thinking about `'use strict';` recently!
 
 ## Conclusion
 

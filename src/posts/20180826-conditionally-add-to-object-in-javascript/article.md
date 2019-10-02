@@ -1,8 +1,8 @@
 ---
-path: "/blog/conditionally-add-to-object-in-javascript"
-date: "2018-08-26"
-title: "Conditionally Add to Object in Javascript"
-description: "Dissect conditionally adding to an object in javascript. Learn about short-circuit evaluation, spread syntax and how they can help you write more elegant es6+."
+path: '/blog/conditionally-add-to-object-in-javascript'
+date: '2018-08-26'
+title: 'Conditionally Add to Object in Javascript'
+description: 'Dissect conditionally adding to an object in javascript. Learn about short-circuit evaluation, spread syntax and how they can help you write more elegant es6+.'
 ---
 
 I have recently been using a certain Javascript pattern to conditionally add to an object based on whether some conditions are true or not. Here’s what it looks like:
@@ -28,7 +28,7 @@ So now we know that the expression `someTruthyCondition && {c: 5}` will either e
 
 ## Spread Syntax
 
-The [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals) has been in the language since the introduction of EMCAScript2015 for array initialization and argument lists. However, the spread syntax for object literals is a new feature being proposed for introduction into the language ([currently at stage 4](https://github.com/tc39/proposal-object-rest-spread)). It copies the the objects’s enumerable properties into a new object. To support old browsers while using the spread syntax, make sure to compile your code with Babel or something similar. We’ve now reviewed the spread syntax and we are evaluating this part of the code which uses the spread feature:
+The [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals) has been in the language since the introduction of EMCAScript2015 for array initialization and argument lists. However, the spread syntax for object literals is a new feature being proposed for introduction into the language ([currently at stage 4](https://github.com/tc39/proposal-object-rest-spread)). It copies the the object's enumerable properties into a new object. To support old browsers while using the spread syntax, make sure to compile your code with Babel or something similar. We’ve now reviewed the spread syntax and we are evaluating this part of the code which uses the spread feature:
 
 ```js
 ...(someTruthyCondition && {c: 5}),
