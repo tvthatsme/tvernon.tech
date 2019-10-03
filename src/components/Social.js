@@ -1,84 +1,91 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { orange } from '../styles/colors'
+import ExternalLink from './ExternalLink'
 import linkedInLogo from '../assets/logo-linkedin.png'
 import githubLogo from '../assets/logo-github.png'
 import twitterLogo from '../assets/logo-twitter.svg'
 
-const Section = styled('div')`
+const HeadingSection = styled.div`
   position: relative;
-  background-color: #ef7125;
+  background-color: ${orange};
   padding: 50px 40px;
   color: white;
 `
 
-const LogoImg = styled('img')`
+const Heading = styled.h2`
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: white;
+`
+
+const Description = styled.p`
+  background-color: white;
+  padding: 50px 40px 20px;
+  margin: 0;
+`
+
+const LogoImg = styled.img`
   height: 40px;
   width: 40px;
   margin: 0 auto;
 `
 
-const LogoStyle = {
-  position: 'absolute',
-  height: '70px',
-  width: '70px',
-  bottom: 0,
-  transform: 'translateY(50%)',
-  borderRadius: '50%',
-  padding: 10,
-  border: '5px solid white',
-  backgroundColor: orange,
-}
+const SocialLink = styled(ExternalLink)`
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  bottom: 0;
+  transform: translateY(50%);
+  border-radius: 50%;
+  padding: 10px;
+  border: 5px solid white;
+  background-color: ${orange};
+  ${props => (props.left ? `left: ${props.left}px` : ``)};
 
-const LinkedIn = Object.assign({}, LogoStyle, { left: '30%' })
+  &:hover {
+    background: ${orange};
+  }
+`
 
-const Twitter = Object.assign({}, LogoStyle, { left: '50%' })
+const GithubLink = () => (
+  <SocialLink href="https://github.com/tvthatsme">
+    <LogoImg src={githubLogo} alt="My Github Profile" />
+  </SocialLink>
+)
+
+const LinkedInLink = () => (
+  <SocialLink href="https://linkedin.com/in/tnvernon" left={120}>
+    <LogoImg
+      src={linkedInLogo}
+      alt="My LinkedIn Profile"
+      style={{ marginLeft: '2px' }}
+    />
+  </SocialLink>
+)
+
+const TwitterLink = () => (
+  <SocialLink href="https://twitter.com/tvernon_tech" left={200}>
+    <LogoImg
+      src={twitterLogo}
+      alt="My Twitter Profile"
+      style={{ transform: 'scale(1.4)' }}
+    />
+  </SocialLink>
+)
 
 const Social = () => {
   return (
     <div>
-      <Section>
-        <h2 style={{ marginTop: 0, marginBottom: '20px', color: 'white' }}>
-          Find me online
-        </h2>
-        <a
-          style={LogoStyle}
-          target="_blank"
-          href="https://github.com/tvthatsme"
-          rel="noopener noreferrer"
-        >
-          <LogoImg src={githubLogo} alt="My Github Profile" />
-        </a>
-        <a
-          style={LinkedIn}
-          target="_blank"
-          href="https://linkedin.com/in/tnvernon"
-          rel="noopener noreferrer"
-        >
-          <LogoImg
-            src={linkedInLogo}
-            alt="My LinkedIn Profile"
-            style={{ marginLeft: '2px' }}
-          />
-        </a>
-        <a
-          style={Twitter}
-          target="_blank"
-          href="https://twitter.com/tvernon_tech"
-          rel="noopener noreferrer"
-        >
-          <LogoImg
-            src={twitterLogo}
-            alt="My Twitter Profile"
-            style={{ transform: 'scale(1.4)' }}
-          />
-        </a>
-      </Section>
-      <div style={{ backgroundColor: 'white', padding: '50px 40px 20px' }}>
-        <p>
-          Check out my open source work, professional experience, and tweets.
-        </p>
-      </div>
+      <HeadingSection>
+        <Heading>Find me online</Heading>
+        <GithubLink />
+        <LinkedInLink />
+        <TwitterLink />
+      </HeadingSection>
+      <Description>
+        Check out my open source work, professional experience, and tweets.
+      </Description>
     </div>
   )
 }
