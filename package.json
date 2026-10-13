@@ -7,7 +7,7 @@
   "dependencies": {
     "@emotion/core": "10.0.21",
     "@emotion/styled": "10.0.17",
-    "@octokit/rest": "16.21.1",
+    "@octokit/rest": "16.43.2",
     "emotion": "10.0.17",
     "emotion-server": "10.0.17",
     "gatsby": "2.16.5",
